@@ -31,6 +31,76 @@
             </ul>
         </div>
     </nav>
+
+    <header class="jumbotron jumbotron-fluid text-center" id="inicio">
+        <div class="container">
+            <h1 class="display-4">¡Las mejores tortas!</h1>
+            <p class="lead">Deliciosas tortas para cualquier ocasión</p>
+            <!-- Selector de color -->
+            <div class="mt-4">
+                <label for="colorPicker" class="text-white">Cambiar color de fondo:</label>
+                <input type="color" id="colorPicker" class="form-control form-control-color d-inline-block" style="width: 50px;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <section id="tortas" class="container py-5">
+        <h2 class="text-center mb-4">Nuestras Tortas</h2>
+        <div class="row">
+            <!-- Torta 1 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200?text=Torta+Chocolate" class="card-img-top torta-img" alt="Torta de Chocolate">
+                    <div class="card-body">
+                        <h5 class="card-title">Torta de Chocolate</h5>
+                        <p class="card-text">Deliciosa torta de chocolate, perfecta para cualquier ocasión.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Torta 2 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200?text=Torta+Mixta" class="card-img-top torta-img" alt="Torta Mixta">
+                    <div class="card-body">
+                        <h5 class="card-title">Torta Mixta</h5>
+                        <p class="card-text">Deliciosa torta de mousse, perfecta para un regalo sorpresa.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Budin -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="budin.jpeg" class="card-img-top torta-img" alt="Alfajores de Maicena">
+                    <div class="card-body">
+                        <h5 class="card-title">Budines</h5>
+                        <p class="card-text">Budín clásico, inglés, marmolado y cítrico.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Torta de fresa -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200?text=Torta+Fresa" class="card-img-top torta-img" alt="Torta de Fresa">
+                    <div class="card-body">
+                        <h5 class="card-title">Torta de Fresa</h5>
+                        <p class="card-text">Torta fresca de fresa con crema, ideal para celebraciones.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript para cambiar color de fondo -->
+    <script>
+        document.getElementById('colorPicker').addEventListener('input', function() {
+            document.body.style.backgroundColor = this.value;
+        });
+    </script>
     
 </body>
 </html>
