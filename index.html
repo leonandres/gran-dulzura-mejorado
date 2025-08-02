@@ -6,12 +6,13 @@
     <title>Gran Dulzura</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@700&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/icon-page.png" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body data-theme="light">
     <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <a class="navbar-brand" href="#inicio">Gran Dulzura</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,36 +23,68 @@
                     <a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#tortas">Tortas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contacto">Contacto</a>
                 </li>
+                <li class="nav-item">
+                    <button class="btn btn-theme" type="button" id="themeButton" onclick="toggleTheme()">
+                        <i id="themeIcon" class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Encabezado -->
-    <header class="jumbotron jumbotron-fluid text-center" id="inicio">
-        <div class="container">
-            <h1 class="display-4">¡Las mejores tortas!</h1>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero text-center">
+        <div class="hero-content">
+            <h1 class="display-3">¡Las mejores tortas!</h1>
             <p class="lead">Deliciosas tortas para cualquier ocasión</p>
-            <!-- Botón de tema -->
-            <div class="mt-4">
-                <button class="btn btn-secondary" type="button" id="themeButton" onclick="toggleTheme()">
-                    <i id="themeIcon" class="fas fa-moon"></i>
-                </button>
-            </div>
+            <a href="#tortas" class="btn btn-primary btn-lg">Ver Nuestras Tortas</a>
         </div>
-    </header>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="sobre-nosotros" class="container-fluid py-5">
+        <h2 class="text-center mb-4">Sobre Nosotros</h2>
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/cupcake.jpeg" class="d-block w-100" alt="Pastelería 1" style="height: 400px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/lemon-pie-cortado.jpeg" class="d-block w-100" alt="Pastelería 2" style="height: 400px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/rosca.jpeg" class="d-block w-100" alt="Pastelería 3" style="height: 400px; object-fit: cover;">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="text-center mt-4">
+            <p class="lead">En Gran Dulzura, creamos postres con amor y dedicación para hacer tus momentos especiales inolvidables.</p>
+        </div>
+    </section>
 
     <!-- Contenido principal -->
-    <section id="tortas" class="container py-5">
+    <section id="tortas" class="container-fluid py-4">
         <h2 class="text-center mb-4">Nuestras Tortas</h2>
         <div class="row">
-            <!-- Cupcake 1 -->
+            <!-- Torta 1 -->
             <div class="col-md-3 col-sm-6 mb-4">
-                <div class="card h-100">
+                <div class="card h-100 animate__animated animate__fadeIn">
                     <img src="img/cupcake.jpeg" class="card-img-top torta-img" alt="Cupcakes">
                     <div class="card-body">
                         <h5 class="card-title">Cupcakes</h5>
@@ -62,7 +95,7 @@
             </div>
             <!-- Torta 2 -->
             <div class="col-md-3 col-sm-6 mb-4">
-                <div class="card h-100">
+                <div class="card h-100 animate__animated animate__fadeIn">
                     <img src="img/lemon-pie-cortado.jpeg" class="card-img-top torta-img" alt="Lemon Pie">
                     <div class="card-body">
                         <h5 class="card-title">Lemon Pie</h5>
@@ -71,9 +104,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Budines -->
+            <!-- Torta 3 -->
             <div class="col-md-3 col-sm-6 mb-4">
-                <div class="card h-100">
+                <div class="card h-100 animate__animated animate__fadeIn">
                     <img src="img/budin.jpeg" class="card-img-top torta-img" alt="Budines">
                     <div class="card-body">
                         <h5 class="card-title">Budines</h5>
@@ -84,7 +117,7 @@
             </div>
             <!-- Torta 4 -->
             <div class="col-md-3 col-sm-6 mb-4">
-                <div class="card h-100">
+                <div class="card h-100 animate__animated animate__fadeIn">
                     <img src="img/rosca.jpeg" class="card-img-top torta-img" alt="Rosca de Pascua">
                     <div class="card-body">
                         <h5 class="card-title">Rosca de Pascua</h5>
@@ -97,13 +130,26 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contacto" class="bg-dark text-white text-center py-4">
+    <footer id="contacto" class="text-white text-center py-4">
         <div class="container">
-            <h4>Contacto</h4>
-            <p>Contáctanos para pedidos personalizados:</p>
-            <p>Email: <a href="mailto:info@grandulzura.com" class="text-rosa">info@grandulzura.com</a></p>
-            <p>Teléfono: +54 11 1234-5678</p>
-            <p>Síguenos en: <a href="https://www.instagram.com/gran_dulzura/" class="text-rosa" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></p>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h4>Contacto</h4>
+                    <p>Email: <a href="mailto:info@grandulzura.com" class="text-rosa">info@grandulzura.com</a></p>
+                    <p>Teléfono: +54 11 1234-5678</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h4>Síguenos</h4>
+                    <p>
+                        <a href="https://www.instagram.com/gran_dulzura/" class="text-rosa mx-2" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/541112345678" class="text-rosa mx-2" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h4>Gran Dulzura</h4>
+                    <p>Postres artesanales para tus momentos especiales.</p>
+                </div>
+            </div>
             <p>&copy; 2025 Gran Dulzura. Todos los derechos reservados.</p>
         </div>
     </footer>
@@ -117,15 +163,13 @@
         function toggleTheme() {
             const body = document.body;
             const themeIcon = document.getElementById('themeIcon');
-            const currentTheme = localStorage.getItem('theme') || 'light';
+            const currentTheme = body.getAttribute('data-theme') || 'light';
             if (currentTheme === 'light') {
-                body.style.backgroundColor = '#212529';
-                body.style.color = '#f8d7da';
+                body.setAttribute('data-theme', 'dark');
                 themeIcon.className = 'fas fa-sun';
                 localStorage.setItem('theme', 'dark');
             } else {
-                body.style.backgroundColor = '#f8f9fa';
-                body.style.color = '#212529';
+                body.setAttribute('data-theme', 'light');
                 themeIcon.className = 'fas fa-moon';
                 localStorage.setItem('theme', 'light');
             }
@@ -134,11 +178,8 @@
         // Aplicar el tema guardado al cargar la página
         document.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme') || 'light';
-            if (savedTheme === 'dark') {
-                document.body.style.backgroundColor = '#212529';
-                document.body.style.color = '#f8d7da';
-                document.getElementById('themeIcon').className = 'fas fa-sun';
-            }
+            document.body.setAttribute('data-theme', savedTheme);
+            document.getElementById('themeIcon').className = savedTheme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
         });
     </script>
 </body>
