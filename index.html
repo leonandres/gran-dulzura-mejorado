@@ -1,45 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gran dulzura</title>
-    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel = "stylesheet" href = "styles.css">
+    <title>Gran Dulzura</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/icon-page.png" type="image/x-icon">
 </head>
 <body>
-
-    <nav class = "navbar navbar-expland-lg">
-        <a class = "navbar-brand">Gran Dulzura</a>
-        <button class = "navbar-toggler" type = "button">
-            <span class = "navbar-toggler-icon"></span>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#inicio">Gran Dulzura</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class = "collapse" id = "navbarContenido">
-            <ul class = "navbar ml-auto">
-                <li class = "nav-item active">
-                    <a class = "nav-link" href = "#">Inicio</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
                 </li>
-                <li class = "nav-item">
-                    <a class = "nav-link" href = "#">Tortas</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tortas">Tortas</a>
                 </li>
-                <li class = "nav-item">
-                    <a class = "nav-link" href = "#">Cupcakes</a>
-                </li>
-                <li class = "nav-item">
-                    <a class = "nav-link" href = "#">Contacto</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <!-- Encabezado -->
     <header class="jumbotron jumbotron-fluid text-center" id="inicio">
         <div class="container">
             <h1 class="display-4">¡Las mejores tortas!</h1>
             <p class="lead">Deliciosas tortas para cualquier ocasión</p>
-            <!-- Selector de color -->
+            <!-- Botón de tema -->
             <div class="mt-4">
-                <label for="colorPicker" class="text-white">Cambiar color de fondo:</label>
-                <input type="color" id="colorPicker" class="form-control form-control-color d-inline-block" style="width: 50px;">
+                <button class="btn btn-secondary" type="button" id="themeButton" onclick="toggleTheme()">
+                    <i id="themeIcon" class="fas fa-moon"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -48,13 +49,13 @@
     <section id="tortas" class="container py-5">
         <h2 class="text-center mb-4">Nuestras Tortas</h2>
         <div class="row">
-            <!-- Torta 1 -->
+            <!-- Cupcake 1 -->
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="card h-100">
-                    <img src="https://via.placeholder.com/300x200?text=Torta+Chocolate" class="card-img-top torta-img" alt="Torta de Chocolate">
+                    <img src="img/cupcake.jpeg" class="card-img-top torta-img" alt="Cupcakes">
                     <div class="card-body">
-                        <h5 class="card-title">Torta de Chocolate</h5>
-                        <p class="card-text">Deliciosa torta de chocolate, perfecta para cualquier ocasión.</p>
+                        <h5 class="card-title">Cupcakes</h5>
+                        <p class="card-text">Unas con crema chantillí decorada con brillantina comestible y otras con merengue italiano en dos colores 🤗 Felices de ser parte de sus momentos especiales.</p>
                         <a href="#" class="btn btn-primary">Agregar al carrito</a>
                     </div>
                 </div>
@@ -62,18 +63,18 @@
             <!-- Torta 2 -->
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="card h-100">
-                    <img src="https://via.placeholder.com/300x200?text=Torta+Mixta" class="card-img-top torta-img" alt="Torta Mixta">
+                    <img src="img/lemon-pie-cortado.jpeg" class="card-img-top torta-img" alt="Lemon Pie">
                     <div class="card-body">
-                        <h5 class="card-title">Torta Mixta</h5>
-                        <p class="card-text">Deliciosa torta de mousse, perfecta para un regalo sorpresa.</p>
+                        <h5 class="card-title">Lemon Pie</h5>
+                        <p class="card-text">De las grandes combinaciones en la pastelería, base de masa sablée, rellena de curd de limón y cubierta con merengue italiano.</p>
                         <a href="#" class="btn btn-primary">Agregar al carrito</a>
                     </div>
                 </div>
             </div>
-            <!-- Budin -->
+            <!-- Budines -->
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="card h-100">
-                    <img src="budin.jpeg" class="card-img-top torta-img" alt="Alfajores de Maicena">
+                    <img src="img/budin.jpeg" class="card-img-top torta-img" alt="Budines">
                     <div class="card-body">
                         <h5 class="card-title">Budines</h5>
                         <p class="card-text">Budín clásico, inglés, marmolado y cítrico.</p>
@@ -81,13 +82,13 @@
                     </div>
                 </div>
             </div>
-            <!-- Torta de fresa -->
+            <!-- Torta 4 -->
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="card h-100">
-                    <img src="https://via.placeholder.com/300x200?text=Torta+Fresa" class="card-img-top torta-img" alt="Torta de Fresa">
+                    <img src="img/rosca.jpeg" class="card-img-top torta-img" alt="Rosca de Pascua">
                     <div class="card-body">
-                        <h5 class="card-title">Torta de Fresa</h5>
-                        <p class="card-text">Torta fresca de fresa con crema, ideal para celebraciones.</p>
+                        <h5 class="card-title">Rosca de Pascua</h5>
+                        <p class="card-text">Elaborada con manteca de primera calidad, enriquecida con ralladura de naranja y limón. ¡Cubierta con mucha crema pastelera, cerezas o cerezas e higos!</p>
                         <a href="#" class="btn btn-primary">Agregar al carrito</a>
                     </div>
                 </div>
@@ -95,12 +96,50 @@
         </div>
     </section>
 
-    <!-- JavaScript para cambiar color de fondo -->
+    <!-- Footer -->
+    <footer id="contacto" class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h4>Contacto</h4>
+            <p>Contáctanos para pedidos personalizados:</p>
+            <p>Email: <a href="mailto:info@grandulzura.com" class="text-rosa">info@grandulzura.com</a></p>
+            <p>Teléfono: +54 11 1234-5678</p>
+            <p>Síguenos en: <a href="https://www.instagram.com/gran_dulzura/" class="text-rosa" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></p>
+            <p>&copy; 2025 Gran Dulzura. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript para cambiar temas -->
     <script>
-        document.getElementById('colorPicker').addEventListener('input', function() {
-            document.body.style.backgroundColor = this.value;
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            if (currentTheme === 'light') {
+                body.style.backgroundColor = '#212529';
+                body.style.color = '#f8d7da';
+                themeIcon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.style.backgroundColor = '#f8f9fa';
+                body.style.color = '#212529';
+                themeIcon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Aplicar el tema guardado al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                document.body.style.backgroundColor = '#212529';
+                document.body.style.color = '#f8d7da';
+                document.getElementById('themeIcon').className = 'fas fa-sun';
+            }
         });
     </script>
-    
 </body>
 </html>
